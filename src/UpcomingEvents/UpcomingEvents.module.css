@@ -1,0 +1,93 @@
+
+.container4 {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+.events-title {
+    font-size: 2rem;
+    color: #002060;
+    margin-bottom: 20px;
+}
+.events {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.event-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 220px;
+    text-align: left;
+}
+.event-card h3 {
+    font-size: 1.5rem;
+    color: #c00000;
+    margin: 0 0 10px 0;
+}
+.event-card p {
+    font-size: 1rem;
+    color: #444;
+    margin: 5px 0;
+}
+.event-card .time {
+    font-size: 0.9rem;
+    color: #777;
+}
+.event-card .location {
+    font-size: 0.9rem;
+    color: #777;
+    display: flex;
+    align-items: center;
+}
+.event-card .location img {
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+}
+.find-out-more {
+    display: block;
+    margin: 15px 0 0 0;
+    padding: 10px 15px;
+    border: 1px solid #004aad;
+    color: #004aad;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.find-out-more:hover {
+    background-color: #004aad;
+    color: #fff;
+}
+.pagination {
+    margin-top: 20px;
+}
+.pagination span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.pagination .active {
+    background-color: #c00000;
+}
+
+
+@media (max-width: 768px) {
+    .events {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}

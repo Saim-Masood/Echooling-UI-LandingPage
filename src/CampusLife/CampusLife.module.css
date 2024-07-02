@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+    background-color: white;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Full width for smaller screens */
+    max-width: 600px; /* Maximum width to keep items centered */
+}
+
+.content h1 {
+    font-size: 2rem;
+    color: #123456;
+    margin: 0;
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fafafa;
+    transition: background-color 0.3s;
+    flex-wrap: wrap; /* Allow wrapping within the item */
+}
+
+.item:hover {
+    background-color: #e0f7fa;
+}
+
+.item-content {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Allow content to grow */
+    min-width: 200px; /* Minimum width to keep items aligned */
+}
+
+.item-content img {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+
+.item .vector-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.item .text {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 48px - 20px); /* Adjust for icon size and margin */
+}
+
+.item .text h2 {
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+}
+
+.item .text p {
+    font-size: 1rem;
+    margin: 0;
+    word-wrap: break-word; /* Ensure long words break to avoid overflow */
+}
+
+.image {
+    width: 100%;
+    max-width: 300px; /* Adjust max-width for the image */
+    margin-top: 20px; /* Add margin for spacing */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-wrap: nowrap; /* Disable wrapping for larger screens */
+    }
+
+    .content {
+        width: 50%; /* Adjust width for larger screens */
+    }
+
+    .image {
+        width: 40%; /* Adjust width for larger screens */
+        margin-top: 0; /* Remove top margin */
+    }
+}

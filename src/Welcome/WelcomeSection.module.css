@@ -1,0 +1,166 @@
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    background-color: #fff;
+}
+
+.text-container {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.blue {
+    color: #0033a0;
+}
+
+.red {
+    color: #d0193a;
+}
+
+p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 20px 0;
+}
+
+.arrow{
+    color: white;
+    padding-top: 20px;
+}
+.guide-link {
+    color: #d0193a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0033a0;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+
+.support {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #0033a0;
+}
+
+
+
+
+.image-container {
+    position: relative;
+    max-width: 400px;
+}
+
+.floating-logo {
+    width: 80px;
+    position: absolute;
+    animation: float 5s infinite;
+}
+
+.images {
+    display: flex;
+    
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding-left: 80px;
+}
+
+@keyframes float {
+    0% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Positioning the logo at the corners */
+.image-container .floating-logo {
+    top: 10px;
+    right: -20px;
+}
+
+.image-container .images img:first-of-type + .floating-logo {
+    top: auto;
+    bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .text-container {
+        max-width: 100%;
+        order: 2;
+    }
+
+    .image-container {
+        max-width: 100%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .floating-logo {
+        width: 60px;
+    }
+
+    .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .images img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .floating-logo {
+        width: 50px;
+    }
+
+    .read-more {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .support {
+        font-size: 0.9em;
+    }
+
+    .images img {
+        width: 100%;
+        height: auto;
+    }
+}
